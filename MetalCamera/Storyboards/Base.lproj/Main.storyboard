@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MetalCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mtkView contentMode="scaleAspectFit" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" paused="YES" enableSetNeedsDisplay="YES" autoResizeDrawable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFf-Ts-tNS" customClass="MetalView" customModule="MetalCamera" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mtkView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLb-Jr-Nt4">
+                                <rect key="frame" x="161" y="732" width="92" height="30"/>
+                                <state key="normal" title="Change Filter"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ba-zu-idX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XLb-Jr-Nt4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7sf-Yw-cl7"/>
+                            <constraint firstItem="sFf-Ts-tNS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DkP-VU-DpF"/>
+                            <constraint firstAttribute="bottom" secondItem="sFf-Ts-tNS" secondAttribute="bottom" id="Qnr-Xo-rRS"/>
+                            <constraint firstAttribute="trailing" secondItem="sFf-Ts-tNS" secondAttribute="trailing" id="bvv-p9-ZAe"/>
+                            <constraint firstItem="sFf-Ts-tNS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lIg-bE-Nff"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XLb-Jr-Nt4" secondAttribute="bottom" constant="100" id="xME-99-efw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="metalView" destination="sFf-Ts-tNS" id="JNA-D8-nTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="64"/>
+        </scene>
+    </scenes>
+</document>
